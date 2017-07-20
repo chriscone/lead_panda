@@ -31,12 +31,14 @@ node('node') {
        stage('Store artifact'){
 
          echo 'Storing artifact to ...'
+         sleep(2)
 
        }
 
        stage('Deploy'){
 
          echo 'Deploying to ...'
+         sleep(4)
 
        }
 
@@ -47,8 +49,6 @@ node('node') {
          sh 'rm node_modules -rf'
 
        }
-
-
 
     }
     catch (err) {
